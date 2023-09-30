@@ -33,3 +33,16 @@ variable "sample_list" {
 output "print_list" {
   value      = " Welcome To ${var.sample_list[0]} Trainig and the batch number is ${var.sample_list[1]} and the name is ${var.sample_list[2]}"
 }
+
+# Declaring a map variable
+variable "sample_map" {
+    default = {
+        batch  = "b55"
+        Mode   = "Online"
+        Trainig= "DevOpsWithAWS"
+    }
+}
+ # printing a map variable
+ output "sample_list_op" {
+    value = " ${var.sample_list[Trainig] has great scope of opportunities and this is complete  ${var.sample_list[Mode]}} Traning "
+ }
