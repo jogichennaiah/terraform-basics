@@ -58,5 +58,5 @@ variable "sample_map" {
  variable "state" {}
 
  output "state_name" {
-    value    = var.state_name
+    value    = var.state
  }
