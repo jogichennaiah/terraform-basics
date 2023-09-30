@@ -44,5 +44,5 @@ variable "sample_map" {
 }
  # printing a map variable
  output "sample_list_op" {
-    value = " ${var.sample_list[Trainig]} has great scope of opportunities and this is complete  ${var.sample_list[Mode]} Traning"
+    value = " ${var.sample_map[Trainig]} has great scope of opportunities and this is complete  ${var.sample_map[Mode]} Traning"
  }
