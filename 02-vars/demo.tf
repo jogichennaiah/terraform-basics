@@ -63,6 +63,7 @@ variable "sample_map" {
 
  variable "country" {}
 
- variable "country_name" {
-    value   = "Name Of our country is ${var.country}"
+ output "country_name" {
+    value = Name of our country is ${var.country}
  }
+
