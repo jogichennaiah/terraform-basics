@@ -45,4 +45,12 @@ variable "sample_map" {
  # printing a map variable
  output "sample_list_op" {
     value = "${var.sample_map["Trainig"]} has great scope of opportunities and this is complete  ${var.sample_map["Mode"]} Traning"
+ } 
+
+ #####Declaring on empty variable and passing the value in the  *.tfvars file
+
+ variable "city" {}
+
+ output "city_name" {
+    value    ="Name of the city is ${var.city}"
  }
