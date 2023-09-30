@@ -31,5 +31,5 @@ variable "sample_list" {
 }
 
 output "print_list" {
-  value      = " Welcome To ${var.sample_list[0]} Trainig and the batch number is ${var.sample_list[1]} and the name is ${var.sample_list[3]}"
+  value      = " Welcome To ${var.sample_list[0]} Trainig and the batch number is ${var.sample_list[1]} and the name is ${var.sample_list[2]}"
 }
