@@ -5,5 +5,5 @@ variable "sample" {
 
 # Printing on output
 output "op" {
-    value   = "var.sample"
+    value   = var.sample
 }
