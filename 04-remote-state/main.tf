@@ -20,5 +20,5 @@ resource "aws_instance" "web" {
 }
 
 variable "instances" {
-  default = ["catalogue" , "user" , "cart"]
+  default = ["catalogue" , "user" , "cart" , "shipping"]
 }
