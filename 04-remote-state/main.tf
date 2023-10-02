@@ -26,3 +26,6 @@ variable "instances" {
 output "private_ip_address" {
   value   = aws_instance.web.*.private_dns
 }
+
+
+
