@@ -10,11 +10,15 @@ data "aws_ami" "ami" {
 
 
 resource "aws_instance" "web" {
-  count         = var.howManyYouWant
+  count         = length(var.instances)
   ami           = data.aws_ami.ami.image_id
   instance_type = "t3.medium"
 
   tags = {
-    Name = "Terraform-web-Instance${count.index+1}"
+    Name = "var.instances[count.index]"
   }
+}
+
+variable "instances" {
+  default = ["catalogue" , "user" , "cart"]
 }
