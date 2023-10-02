@@ -1,11 +1,11 @@
 # Creating security group
 
-resource "aws_security_group" "allow_ssh" {
-  name        = "allow_ssh"
-  description = "Allow SSH inbound traffic"
+resource "aws_security_group" "allows_ssh" {
+  name        = "allows_ssh"
+  description = "Allows SSH inbound traffic"
 
   ingress {
-    description      = "SSH from Internet"
+    description      = "SSH from Public Network"
     from_port        = 22
     to_port          = 22
     protocol         = "tcp"
@@ -21,7 +21,7 @@ resource "aws_security_group" "allow_ssh" {
   }
 
   tags = {
-    Name = "allow_ssh"
+    Name = "allows_public_ssh"
   }
 }
 
