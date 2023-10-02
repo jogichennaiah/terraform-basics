@@ -2,7 +2,7 @@
 
 data "aws_ami" "ami" {
   most_recent      = true
-  name_regex       = "DevOps-LabImage-CentOS7"
+  name_regex       = "b55-chinna-lab-image"
   owners           = ["self"]
 }
  
@@ -11,7 +11,6 @@ data "aws_ami" "ami" {
 
 resource "aws_instance" "web" {
   count         = var.howManyYouWant
-
   ami           = data.aws_ami.ami.image_id
   instance_type = "t3.medium"
 
