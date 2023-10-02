@@ -1,9 +1,11 @@
-resource "aws_instance" "web" {
+resource "aws_instance" "moapp" {
   ami                      = "ami-05377c442727e8308"
   instance_type            = "t3.medium"
-  vpc_security_group_ids   = [aws_security_group.allow_ssh.id]
+  vpc_security_group_ids   = [var.sg]
 
   tags = {
-    Name = "My-Tf-Instance"
+    Name = "Module-Instance"
   }
 }
+
+variable "sg"
